@@ -1,0 +1,46 @@
+** F A L A **
+ ESTADO
+ 0 = Shared
+ 1 = Invalid
+ 2 = modified
+
+ BUS
+ 0 = DEFAULT
+ 1 = read miss
+ 2 = write miss
+ 3 = read hit
+ 4 = write hit
+ 5 = Fetch
+ 6 = Fetch invalidate
+ 7 = Invalidate
+
+ SIGNAL
+ 0 = DEFAULT
+ 1 = Data write-back / write miss
+ 2 = Send write miss message
+ 3 = Send read miss message
+ 4 = Data write-back; read miss
+ 5 = Fetch Data write-back
+ 6 = Send Invalidate message
+ 7 = Read miss
+
+-------------------------
+** E S C U T A **
+ ESTADO
+ 0 = Shared
+ 1 = Uncached
+ 2 = Exclusive
+
+ BUS
+ 0 = DEFAULT
+ 1 = read miss
+ 2 = write miss
+ 3 = Data write-back
+
+ SIGNAL
+ 0 = Data value reply / Sharers = Sharers + {P}
+ 1 = Fetch; data value reply; Sharers = Sharers + {P}
+ 2 = Invalidate; Sharers = {P}; date valeu reply
+ 3 = Sharers = {}
+ 4 = Data value reply; / Sharers = {P}
+ 5 = Fetch / Invalidate Date value reply Sharers = {P}

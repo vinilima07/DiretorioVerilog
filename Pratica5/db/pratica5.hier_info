@@ -1,0 +1,141 @@
+|pratica5
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => LEDR[3].DATAIN
+SW[4] => LEDR[4].DATAIN
+SW[5] => LEDR[5].DATAIN
+SW[6] => LEDR[6].DATAIN
+SW[7] => LEDR[7].DATAIN
+SW[8] => LEDR[8].DATAIN
+SW[9] => LEDR[9].DATAIN
+SW[10] => LEDR[10].DATAIN
+SW[11] => LEDR[11].DATAIN
+SW[12] => LEDR[12].DATAIN
+SW[13] => LEDR[13].DATAIN
+SW[14] => LEDR[14].DATAIN
+SW[15] => LEDR[15].DATAIN
+SW[16] => SW[16].IN1
+SW[17] => SW[17].IN1
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= SW[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= SW[9].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[10] <= SW[10].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[11] <= SW[11].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[12] <= SW[12].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[13] <= SW[13].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[14] <= SW[14].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[15] <= SW[15].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[16] <= SW[16].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[17] <= SW[17].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= display7Segmentos:Exibe0.port1
+HEX0[1] <= display7Segmentos:Exibe0.port1
+HEX0[2] <= display7Segmentos:Exibe0.port1
+HEX0[3] <= display7Segmentos:Exibe0.port1
+HEX0[4] <= display7Segmentos:Exibe0.port1
+HEX0[5] <= display7Segmentos:Exibe0.port1
+HEX0[6] <= display7Segmentos:Exibe0.port1
+HEX1[0] <= display7Segmentos:Exibe1.port1
+HEX1[1] <= display7Segmentos:Exibe1.port1
+HEX1[2] <= display7Segmentos:Exibe1.port1
+HEX1[3] <= display7Segmentos:Exibe1.port1
+HEX1[4] <= display7Segmentos:Exibe1.port1
+HEX1[5] <= display7Segmentos:Exibe1.port1
+HEX1[6] <= display7Segmentos:Exibe1.port1
+HEX2[0] <= display7Segmentos:Exibe2.port1
+HEX2[1] <= display7Segmentos:Exibe2.port1
+HEX2[2] <= display7Segmentos:Exibe2.port1
+HEX2[3] <= display7Segmentos:Exibe2.port1
+HEX2[4] <= display7Segmentos:Exibe2.port1
+HEX2[5] <= display7Segmentos:Exibe2.port1
+HEX2[6] <= display7Segmentos:Exibe2.port1
+
+
+|pratica5|diretorio_listen:Escutando
+clock => signal[0].CLK
+clock => signal[1].CLK
+clock => signal[2].CLK
+clock => state~2.DATAIN
+reset => signal.OUTPUTSELECT
+reset => signal.OUTPUTSELECT
+reset => signal.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+bus[0] => Equal0.IN63
+bus[0] => Equal1.IN63
+bus[0] => Mux0.IN4
+bus[0] => Mux1.IN4
+bus[0] => Decoder0.IN1
+bus[0] => Decoder1.IN2
+bus[0] => saida1[0].DATAIN
+bus[1] => Equal0.IN62
+bus[1] => Equal1.IN62
+bus[1] => Mux0.IN3
+bus[1] => Mux1.IN3
+bus[1] => Decoder1.IN1
+bus[1] => saida1[1].DATAIN
+bus[2] => Equal0.IN61
+bus[2] => Equal1.IN61
+bus[2] => Mux0.IN2
+bus[2] => Mux1.IN2
+bus[2] => Decoder0.IN0
+bus[2] => Decoder1.IN0
+bus[2] => saida1[2].DATAIN
+saida0[0] <= saida0[0].DB_MAX_OUTPUT_PORT_TYPE
+saida0[1] <= saida0[1].DB_MAX_OUTPUT_PORT_TYPE
+saida0[2] <= <GND>
+saida1[0] <= bus[0].DB_MAX_OUTPUT_PORT_TYPE
+saida1[1] <= bus[1].DB_MAX_OUTPUT_PORT_TYPE
+saida1[2] <= bus[2].DB_MAX_OUTPUT_PORT_TYPE
+saida2[0] <= signal[0].DB_MAX_OUTPUT_PORT_TYPE
+saida2[1] <= signal[1].DB_MAX_OUTPUT_PORT_TYPE
+saida2[2] <= signal[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pratica5|display7Segmentos:Exibe0
+Entrada[0] => Decoder0.IN2
+Entrada[1] => Decoder0.IN1
+Entrada[2] => Decoder0.IN0
+SaidaDisplay[6] <= SaidaDisplay.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[5] <= SaidaDisplay.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pratica5|display7Segmentos:Exibe1
+Entrada[0] => Decoder0.IN2
+Entrada[1] => Decoder0.IN1
+Entrada[2] => Decoder0.IN0
+SaidaDisplay[6] <= SaidaDisplay.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[5] <= SaidaDisplay.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pratica5|display7Segmentos:Exibe2
+Entrada[0] => Decoder0.IN2
+Entrada[1] => Decoder0.IN1
+Entrada[2] => Decoder0.IN0
+SaidaDisplay[6] <= SaidaDisplay.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[5] <= SaidaDisplay.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SaidaDisplay[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
